@@ -1,0 +1,299 @@
+/*تنظیمات اولیه*/
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+/*فونت ها*/
+.font1{
+  font-family: Segoe Script;
+  font-size: 50px;
+  color: white;
+  margin:10px;
+}
+.font2{
+  font-family: monospace;
+  font-size: 22px;
+}
+.font3{
+  font-family: Segoe Print;
+  font-size: 16px;
+  text-align: center;
+  color: black;
+}
+.font4{
+  font-family: Tahoma;
+  font-size:14px;
+}
+/*پس زمینه*/
+.body{
+
+
+  width: 1360px;
+  height: auto;
+
+
+
+}
+/*مکان نوار راهنما*/
+.HelpBar{
+  background: rgba(0,0,100,0.8);
+  position:absolute;
+  width:1360px;
+  height:100px;
+}
+/*نوشته لگو  نوار راهنما*/
+.Nlogo{
+  position: absolute;
+  top: 0;
+  left: 90px;
+}
+/*لگو نوار راهنما*/
+.logo{
+  position: absolute;
+  width: 300px;
+  height: 298px;
+  top: 5px;
+  left: 5px;
+}
+/*گزینه های نوار راهنما*/
+.top-button{
+  display: flex;
+  background-color: rgba(0,0,0,0.3);
+  border-top-left-radius: 10px;
+  border-top-right-radius: 15px;
+  position: absolute;
+  width: 550px;
+  height: 55px;
+  top: 44px;
+  right: 236px;
+}
+/*نوع گزینه های نوار راهنما*/
+.top-buttonUL{
+  position: absolute;
+  right: 10px;
+  list-style-type: none;
+  font-family: Tahoma;
+
+}
+.li1{
+  float: right;
+}
+/*مشخصات گزینه ها نوار راهنما*/
+.top-buttonA{
+  display: block;
+  text-align: center;
+  padding: 15px;
+  color: white;
+  text-decoration: none;
+}
+/*تغییر هنگام امدن موس روی گزنه ها*/
+.top-buttonA:hover{
+  opacity: 0.7;
+}
+/*مکان سرچ*/
+.search{
+  position: relative;
+  top: 17px;
+  left: 20px;
+}
+/*مشخصات سرچ*/
+.search2{
+  background-color: white;
+  border-style: solid;
+  font-family: Tahoma;
+  height: 25px;
+}
+/*ایکن سرچ*/
+.search-icon{
+  position: absolute;
+  top: 2px;
+  left: 1px;
+}
+.selects {
+
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+
+}
+/*پنجره اول*/
+.select1{
+  position: relative;
+  background-color: rgba(255,255,255,0.5);
+  border-radius: 15px;
+  box-shadow: 5px 5px 10px;
+  width: 300px;
+  height: 500px;
+  top: 150px;
+  left: 20px;
+  margin-bottom: 20px;
+}
+.select2{
+  position: relative;
+  top: 150px;
+  height: 200px;
+  width: 500px;
+  left: 400px;
+  box-shadow: 5px 5px 10px;
+  background-color: rgba(255,255,255,0.5);
+
+}
+.select2B{
+  width: 80px;
+}
+.select2F{
+  width: 275px;
+  margin-left: 90px;
+}
+.select3{
+  position: relative;
+  top: 150px;
+  height: 300px;
+  width: 500px;
+  left: 400px;
+  box-shadow: 5px 5px 10px;
+  background-color: rgba(255,255,255,0.5);
+}
+.select4{
+  position: relative;
+  top: 150px;
+  height: auto;
+  width: 500px;
+  left: 400px;
+  box-shadow: 5px 5px 10px;
+  background-color: rgba(255,255,255,0.5);
+}
+.seldct4F{
+  width: 400px;
+  height: auto;
+
+}
+.select4B{
+  width: 100px;
+  height: 40px;
+  background-color: lightgreen;
+}
+.orders{
+  width: 400px;
+  height: 50px;
+  text-align: center;
+  background: lightblue;
+  margin-top:5px;
+  margin-left: 40px;
+  border-radius: 10px;
+}
+.select5{
+  position: relative;
+  top: 150px;
+  height: auto;
+  width:900px;
+  left: 150px;
+  box-shadow: 5px 5px 10px;
+  background-color: rgba(255,255,255,0.5);
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+.select5D{
+  width: 800px;
+  margin-left: 50px;
+  padding: 20px;
+  margin-top:10px;
+  border-radius: 10px;
+  height: auto;
+  background-color: rgba(100,200,100,0.5);
+}
+/*عکس پنجره اول*/
+.Pselect1{
+  position: absolute;
+  width: 280px;
+  height: 280px;
+  margin: 10px;
+
+}
+/*عنوان پنجره اول*/
+.THselect1{
+  background-color: rgba(0,0,0,0.4);
+  width: 290px;
+  border-radius: 7px;
+  position: absolute;
+  top: 300px;
+  left: 5px;
+  color: white;
+}
+/*متن پنجره اول*/
+.TPselect1{
+  position: absolute;
+  top: 340px;
+  text-align: center;
+  color: black;
+}
+.TPselect2{
+  position: absolute;
+  top: 440px;
+  left: 80px;
+  height: 30px;
+  border-radius: 5px;
+  text-align: center;
+  background: linear-gradient(greenyellow,green, lightgreen, greenyellow);
+}
+.foot {
+  position: static;
+  width: 1360px;
+  height: 120px;
+
+  margin-top:100vh;
+
+}
+
+
+
+
+/*پنجره دوم*/
+.background1{
+
+  position: relative;
+
+  height: 100px;
+
+}
+.text{
+  position: relative;
+  left: 575px;
+  color: white;
+  bottom: 50px;
+
+}
+
+.user{
+  position: fixed;
+  background: blueviolet;
+  right: 1100px;
+  top: 50px;
+  width: 80px;
+  height: 80px;
+  border: solid black 3px;
+  border-radius: 40px;
+  text-align: center;
+  padding-top: 20px;
+
+}
+.basket {
+  position: fixed;
+  background-image: url('image/basket.png');
+  background-size: cover;
+  right: 1050px;
+  top: 65px;
+  width: 50px;
+  height: 50px;
+  border: solid black 3px;
+  border-radius: 25px;
+  text-align: center;
+  padding-top: 10px;
+}
+.btnbuy {
+  width: 200px;
+  height: 30px;
+  background-color: inherit;
+}

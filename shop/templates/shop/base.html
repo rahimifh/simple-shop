@@ -1,0 +1,64 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>shop</title>
+    <link rel="stylesheet" href="{% static 'shop/style.css' %}">
+  </head>
+  <body class="body">
+    <div class="HelpBar">
+      <p class="Nlogo font1">Shop</p>
+
+      <!--گزینه های در نوار راهنما-->
+      <div class="top-button">
+        <ul class="top-buttonUL">
+          {% if user.is_authenticated %}
+          <div class="user">
+            <p>{{user.username}}</p>
+            <form class="" action="{% url 'logoutuser' %}" method="post">
+              {% csrf_token %}
+
+              <button type="submit" name="button">Logout</button>
+            </form>
+          </div>
+          <div class="basket">
+            <h3>{{con}}</h3>
+          </div>
+
+
+          <li class="li1"><a class="font2 top-buttonA" href="{% url 'createtodo' %}">سبد</a></li>
+          <li class="li1"><a class="font2 top-buttonA" href="{% url 'currenttodos' %}">فروشگاه</a></li>
+          <li class="li1"><a class="font2 top-buttonA" href="{% url 'completedtodos' %}">بایگانی</a></li>
+
+          {% else %}
+            <li class="li1"><a class="font2 top-buttonA" href="{% url 'signupuser' %}">ثبت نام</a></li>
+            <li class="li1"><a class="font2 top-buttonA" href="{% url 'loginuser' %}">ورود</a></li>
+          {% endif %}
+        </ul>
+
+        <!--سرچ-->
+        <div class="search">
+          <form>
+            <input class="search2" type="text" name="search" placeholder="      .چه چیزی می خواهید">
+            <button class="search-icon" type="submit"><img src="{% static 'shop/image/search-icon.png' %}"></button>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <div class="selects">
+
+      {% block content %}
+
+
+      {% endblock %}
+
+
+    </div>
+
+
+
+
+  </body>
+</html>

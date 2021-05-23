@@ -1,0 +1,16 @@
+select2F{% extends 'shop/base.html' %}
+
+{% block content %}
+
+  <div class="select3">
+    <h1>Sign Up</h1>
+    <h2>{{error}}</h2>
+    <form class="" action="" method="post">
+      {% csrf_token %}
+      {{form.as_p}}
+      <button class='select2B' type="submit" name="button">Sign up</button>
+    </form>
+  </div>
+
+
+{% endblock %}

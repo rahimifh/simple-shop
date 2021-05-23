@@ -1,0 +1,14 @@
+{% extends 'shop/base.html' %}
+
+{% block content %}
+
+  <div class="select5">
+    {% for i in todos %}
+       <div class="select5D">
+         <h2>{{i.nabe}}-----------{{i.user}}</h2>
+         <h3>{{i.order}}</h3>
+       </div>
+    {% endfor %}
+  </div>
+
+{% endblock %}

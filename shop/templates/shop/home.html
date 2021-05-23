@@ -1,0 +1,18 @@
+{% extends 'shop/base.html' %}
+
+{% block content %}
+
+  {% for i in stuffs %}
+    <div class="select1">
+
+      <img class="Pselect1" src="{{i.image.url}}" alt='img'>
+      <h2 class="THselect1 font3" style="direction: rtl;">{{i.title}}</h2>
+      <p class="TPselect1 font4" style="direction: rtl;">{{i.text}} <br> {{i.price}} :تومان</p>
+      <div class="TPselect2">
+      <a href="{% url 'currenttodos' %}"><p>برای خرید وارد شوید</p></a>
+      </div>
+
+    </div>
+
+  {% endfor %}
+{% endblock %}

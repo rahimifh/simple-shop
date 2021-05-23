@@ -1,0 +1,21 @@
+{% extends 'shop/base.html' %}
+
+{% block content %}
+  <div class="select2">
+    <h2 class="font3">Login Up</h2><br>
+    <h3 class="font4">{{error}}</h3><br>
+    <div class="select2F">
+      <form  action="" method="post">
+        {% csrf_token %}
+        <p style="direction: rtl;">:نام کاربری</p>
+        {{form.username}}<br>
+        <p style="direction: rtl;">:پسورد</p>
+        {{form.password}} <br> <br>
+        <button class='select2B' type="submit" name="button">Login</button>
+      </form>
+    </div>
+
+  </div>
+
+
+{% endblock %}

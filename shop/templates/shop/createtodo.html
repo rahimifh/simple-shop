@@ -1,0 +1,29 @@
+{% extends 'shop/base.html' %}
+
+{% block content %}
+    <div class="select4">
+      <h1 style="direction: rtl;">سبد</h1>
+      <h2>{{error}}</h2>
+      <div class="seldct4F">
+        <form  action="" method="post">
+          {% csrf_token %}
+          <p>نام و نام خانوادگی</p>{{form.name}} <br>
+          <p>شماره تماس</p>{{form.phone}} <br>
+          <p> آدرس و کد پستی</p>{{form.address}}
+          <input type="Textarea" name="order" value="{{todos}}" hidden>
+          <button class="select4B" type="submit" name="button">ارسال سفارش خرید</button>
+        </form>
+      </div>
+      {% for i in todos %}
+      <div class="orders">
+        <form class="" action="{% url 'deleteitme' i.id %}" method="post">
+          {% csrf_token %}
+          <h3>{{i}}</h3>
+            <button type="submit" name="button" >حذف ایتم</button>
+        </form>
+      </div>
+      {% endfor %}
+    </div>
+
+
+{% endblock %}
